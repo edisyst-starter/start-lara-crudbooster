@@ -35,5 +35,17 @@ Vado in BE su Module Generator e seleziono la tabella posts: qui genero tutto
 
 Una volta creati tutti i crud, posso creare dei permessi per i miei crud
 
-Il resto è tutto da provare
+# API con CRUDBooster- esempio con Student
 
+    php artisan make:model Student -mf
+
+Faccio anche la factory giusto per popolare velocemente il DB
+- LISTING = student.index
+- CREATE/UPDATE/DELETE = student.store/update/destroy (metodo POST)
+
+Ho solo i metodi GET e POST. Nelle POST devo inserire anche i parametri
+
+Su Postman ho un 403 senza API secret key.
+- La genero nella sua tab
+- La inserisco in {POST} api/get-token come parametro chiamato **secret**
+- Il token generato lo inserisco nei vari endpoint come Auth/Bearer token (non avrò più il 403)
