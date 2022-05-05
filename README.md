@@ -35,7 +35,16 @@ Vado in BE su Module Generator e seleziono la tabella posts: qui genero tutto
 
 Una volta creati tutti i crud, posso creare dei permessi per i miei crud
 
-# API con CRUDBooster- esempio con Student
+# Ruoli e permessi con CRUDBooster
+
+- Aggiungo almeno uno/due utenti nuovi e non li setto come superadmin
+- Privileges Roles / List Privilege / Add Data : configuro i permessi di questo ruolo
+  - I ruoli così creati li posso associare poi ai vari utenti che creo 
+- Menu Management: associo i vari ruoli ai menu (di default ogni menu è associato solo a superadmin)
+  - Altrimenti di default ogni utente non superadmin non può vedere niente
+  - Tutti i menu che ci sono inizialmente son solo per il superadmin (giustamente perchè sono di amministrazionwe)
+
+# API con CRUDBooster - esempio con Student
 
     php artisan make:model Student -mf
 
